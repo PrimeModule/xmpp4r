@@ -41,9 +41,9 @@ module Jabber
       # #readline returns incorrect encodings for UTF8 strings
       # because SSLSocket does not support encoding conversions
       # This forces a correct encoding, and pervents REXML exceptions
-      def sysread *args
-        super.force_encoding ::Encoding::UTF_8
-      end
+      # def sysread *args
+      #   super.force_encoding ::Encoding::UTF_8
+      # end
     end
 
     ##
